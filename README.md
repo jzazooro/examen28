@@ -9,7 +9,10 @@ El codigo creado para realizar este examen es el siguiente:
 ### main:
 
 ```
+from lanzador import main
 
+if __name__ == '__main__':
+    main()
 ```
 
 ### lanzador:
