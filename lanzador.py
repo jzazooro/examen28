@@ -1,5 +1,7 @@
 from ejercicio2.pregunta2 import determinateiterativo
 from ejercicio2.pregunta2 import determinanterecursivo
+from ejercicio3.pregunta3 import Vehiculo
+from ejercicio3.pregunta3 import Vehiculos
 
 def main():
     w=int(input("¿Que ejercicio desea hacer?: "))
@@ -24,7 +26,36 @@ def main():
         main2()
         
     if w == 3:
-        a=2
+
+        def main3():
+            vehiculo1 = Vehiculo("Halcon milenario", 30, 2, 40)
+            vehiculo2 = Vehiculo("Estrella de la muerte", 1000000000, 2000000, 3000000000)
+            vehiculo3 = Vehiculo("AT-AT", 119, 15, 300)
+            vehiculo4 = Vehiculo("Sclavo 1", 15, 3, 20)
+            vehiculo5 = Vehiculo("Destructor imperial", 1000, 200, 10000)
+            vehiculo6 = Vehiculo("AT-ST", 14, 5, 6)
+            vehiculo7 = Vehiculo("Canonera LAAT ", 51, 61, 82)
+            vehiculo8 = Vehiculo("Ala X", 7, 1, 2)
+            vehiculo9 = Vehiculo("Ala A", 6, 2, 1)
+            vehiculo10 = Vehiculo("Caza tie", 5, 1, 1)
+
+            
+            print("La informacion del halcon milenario es: ", vehiculo1)
+            print("La informacion de la estrella de la muerte es: ", vehiculo2)
+            
+            lista_naves= [vehiculo1, vehiculo2, vehiculo3, vehiculo4, vehiculo5, vehiculo6, vehiculo7, vehiculo8, vehiculo9, vehiculo10]
+            ejercito = Vehiculos()
+            for i in lista_naves:
+                ejercito.naves_append(i.diccionario())
+            
+            print("", ejercito.lis_nombre())
+            print("Las cinco naves con mas cantidad de pasajeros son: ", ejercito.cantidad_pasajeros())
+            print("El vehiculo que necesita mas tripulacion es: ", ejercito.mayor_trip())
+            print("Los vehiculos que empiezan por AT son: ", ejercito.at())
+            print("Los vehiculos que pueden llevar 6 o mas pasajeros son: ", ejercito.pasajeros_6_o_mas())
+            print("Los vehiculos ordenados de peques a grandes son: ", ejercito.naves_peq_grand())
+        main3()
+
     if w == 4:
         a=3
     if w == 5:

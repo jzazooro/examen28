@@ -1,80 +1,92 @@
-class nave:
-
-    def __init__(self, nombre, largo, tripulacion, cantidaddepasajeros):
+class Vehiculo:
+    def __init__(self, nombre, largo, trip, pasajeros):
         self.nombre = nombre
         self.largo = largo
-        self.tripulacion = tripulacion
-        self.cantidaddepasajeros = cantidaddepasajeros
+        self.trip = trip
+        self.pasajeros = pasajeros
 
-    def obtenerlargo(self):
-        print(self.largo)
+    def __str__(self):
+        return "{}, {}, {}, {}".format(self.nombre, self.largo, self.trip, self.pasajeros)
+
+    def get_largo(self):
+        return self.largo
 
     def diccionario(self):
-        diccionario = {'Nombre': self.nombre , 'Largo': self.largo, 'Tripulacion': self.tripulacion, 'Cantidad de pasajeros': self.cantidaddepasajeros}
-        print(diccionario)
+        diccionario = {"Nombre": self.nombre , "Largo": self.largo , "Tripulacion": self.trip , "Pasajeros": self.pasajeros}
+        return diccionario
 
-class naves:
-
+class Vehiculos:
     def __init__(self):
-        self.naves=[]
+        self.naves = []
 
-    def agregarnaves(self, nave):
+    def naves_append(self, nave):
         self.naves.append(nave)
 
-    def obtenernombre(self, lista, key):
-        lista2=[]
+    def get_Nombres(self, lista, key):
+        lista2 = []
         for i in lista:
             for n in self.naves:
                 if n[key] == i:
-                    lista2.append(n['Nombre'])
+                    lista2.append(n["Nombre"])
+        return lista2
 
-    def obtenerlargo(self):
-        lista3=[]
+    def lis_largo(self):
+        lista = []
         for i in self.naves:
-            lista3.append(i['Nombre'])
-        lista3.sort()
-        print(lista3)
+            lista.append(i["Largo"])
+        lista.sort(reverse=True)
+        return self.get_Nombres(lista, "Largo")
     
-    def obtenercantidaddepasajeros(self):
-        lista4=[]
+    def lis_nombre(self):
+        lista = []
         for i in self.naves:
-            lista4.append(i['Cantidad de pasajeros'])
-        lista4.sort()
-        print(self.obtenernombre(lista4, 'Cantidad de pasajeros')[0:5])
+            lista.append(i["Nombre"])
+        lista.sort()
+        return lista
 
-    def obtenermayortripulacion(self):
-        lista5=[]
+    def cantidad_pasajeros(self):
+        lista = []
         for i in self.naves:
-            lista5.append(i['Tripulacion'])
-        lista5.sort()
-        print(self.obtenernombre(lista5, 'Tripulacion')[0:1])
+            lista.append(i["Pasajeros"])
+        lista.sort()
+        return self.get_Nombres(lista, 'Pasajeros')[0:5]
 
-    def bucarat(self):
-        nombres= self.obtenernombre()
-        lista6=[]
-        for i in nombres:
-            if i[0:2] == 'AT':
-                lista6.append(i)
+    def mayor_trip(self):
+        lista = []
+        for i in self.naves:
+            lista.append(i["Tripulacion"])
+        lista.sort()
+        return self.get_Nombres(lista, "Tripulacion")[0:1]
+
+    def at(self):
+        naves_nombre = self.lis_nombre()
+        lista_nombres = []
+        for i in naves_nombre:
+            if i[0:2] == "AT":
+                lista_nombres.append(i)
             else:
                 pass
-        print(lista6)
+        if len(lista_nombres) == 0:
+            return None
+        else:
+            return lista_nombres
 
-    def masdeseispasajeros(self):
-        lista7=[]
+    def pasajeros_6_o_mas(self):
+        lista = []
         for i in self.naves:
-            if i ['Cantidad de pasajeros'] >=6:
-                lista7.append(i['Cantidad de pasajeros'])
-        print(self.obtenernombre(lista7, 'Cantidad de pasajeros'))
+            if i ["Pasajeros"] >= 6:
+                lista.append(i["Pasajeros"])
+        return self.get_Nombres(lista, "Pasajeros")
 
-    def depequeñoagrande(self):
-        lista8=[]
+    def naves_peq_grand(self):
+        lista = []
         for i in self.naves:
-            lista8.append(i['Largp'])
-        lista8.sort()
+            lista.append(i["Largo"])
+        lista.sort()
         for i in self.naves:
-            if lista8[0] == i['Largo']:
+            if lista[0] == i["Largo"]:
                 print(i)
-            elif lista8[len(lista8)-1] == i['Largo']:
+            elif lista[len(lista)-1] == i["Largo"]:
                 print(i)
             else:
                 pass
