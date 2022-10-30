@@ -10,7 +10,6 @@ def main():
     if w == 2:
 
         def main2():
-            determinateiterativo()
             
             a=float(input("Seleccione el elemento 1x1 de la matriz: "))
             b=float(input("Seleccione el elemento 1x2 de la matriz: "))
@@ -22,6 +21,7 @@ def main():
             h=float(input("Seleccione el elemento 3x2 de la matriz: "))
             i=float(input("Seleccione el elemento 3x3 de la matriz: "))
             matriz=[[a, b, c], [d, e, f], [g, h, i]]
+            determinateiterativo(a, b, c, d, e, f, g, h, i)
             determinanterecursivo(matriz, 0, 0)
         main2()
         
