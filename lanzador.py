@@ -43,17 +43,16 @@ def main():
             print("La informacion del halcon milenario es: ", vehiculo1)
             print("La informacion de la estrella de la muerte es: ", vehiculo2)
             
-            lista_naves= [vehiculo1, vehiculo2, vehiculo3, vehiculo4, vehiculo5, vehiculo6, vehiculo7, vehiculo8, vehiculo9, vehiculo10]
-            ejercito = Vehiculos()
-            for i in lista_naves:
-                ejercito.naves_append(i.diccionario())
+            listadevehiculos= [vehiculo1, vehiculo2, vehiculo3, vehiculo4, vehiculo5, vehiculo6, vehiculo7, vehiculo8, vehiculo9, vehiculo10]
+            garage = Vehiculos()
+            for i in listadevehiculos:
+                garage.agregarvehiculos(i.diccionario())
             
-            print("", ejercito.lis_nombre())
-            print("Las cinco naves con mas cantidad de pasajeros son: ", ejercito.cantidad_pasajeros())
-            print("El vehiculo que necesita mas tripulacion es: ", ejercito.mayor_trip())
-            print("Los vehiculos que empiezan por AT son: ", ejercito.at())
-            print("Los vehiculos que pueden llevar 6 o mas pasajeros son: ", ejercito.pasajeros_6_o_mas())
-            print("Los vehiculos ordenados de peques a grandes son: ", ejercito.naves_peq_grand())
+            print("Las cinco naves con mas cantidad de pasajeros son: ", garage.cantidaddepasajeros())
+            print("El vehiculo que necesita menos tripulacion es: ", garage.mayortripulacion())
+            print("Los vehiculos que empiezan por AT son: ", garage.buscarat())
+            print("Los vehiculos que pueden llevar 6 o mas pasajeros son: ", garage.pasajerossuperioraseis())
+            print("Los vehiculos ordenados de peques a grandes son: ", garage.ordenardepeqagrand())
         main3()
 
     if w == 4:

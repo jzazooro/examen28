@@ -1,28 +1,28 @@
 class Vehiculo:
-    def __init__(self, nombre, largo, trip, pasajeros):
+    def __init__(self, nombre, largo, tripulacion, pasajeros):
         self.nombre = nombre
         self.largo = largo
-        self.trip = trip
+        self.tripulacion = tripulacion
         self.pasajeros = pasajeros
 
     def __str__(self):
-        return "{}, {}, {}, {}".format(self.nombre, self.largo, self.trip, self.pasajeros)
+        return "{}, {}, {}, {}".format(self.nombre, self.largo, self.tripulacion, self.pasajeros)
 
-    def get_largo(self):
+    def obtenerlargo(self):
         return self.largo
 
     def diccionario(self):
-        diccionario = {"Nombre": self.nombre , "Largo": self.largo , "Tripulacion": self.trip , "Pasajeros": self.pasajeros}
+        diccionario = {"Nombre": self.nombre , "Largo": self.largo , "Tripulacion": self.tripulacion , "Pasajeros": self.pasajeros}
         return diccionario
 
 class Vehiculos:
     def __init__(self):
         self.naves = []
 
-    def naves_append(self, nave):
+    def agregarvehiculos(self, nave):
         self.naves.append(nave)
 
-    def get_Nombres(self, lista, key):
+    def obtenernombres(self, lista, key):
         lista2 = []
         for i in lista:
             for n in self.naves:
@@ -30,36 +30,36 @@ class Vehiculos:
                     lista2.append(n["Nombre"])
         return lista2
 
-    def lis_largo(self):
+    def funcionlongitud(self):
         lista = []
         for i in self.naves:
             lista.append(i["Largo"])
         lista.sort(reverse=True)
-        return self.get_Nombres(lista, "Largo")
+        return self.obtenernombres(lista, "Largo")
     
-    def lis_nombre(self):
+    def funcionnombre(self):
         lista = []
         for i in self.naves:
             lista.append(i["Nombre"])
         lista.sort()
         return lista
 
-    def cantidad_pasajeros(self):
+    def cantidaddepasajeros(self):
         lista = []
         for i in self.naves:
             lista.append(i["Pasajeros"])
         lista.sort()
-        return self.get_Nombres(lista, 'Pasajeros')[0:5]
+        return self.obtenernombres(lista, 'Pasajeros')[0:5]
 
-    def mayor_trip(self):
+    def mayortripulacion(self):
         lista = []
         for i in self.naves:
             lista.append(i["Tripulacion"])
         lista.sort()
-        return self.get_Nombres(lista, "Tripulacion")[0:1]
+        return self.obtenernombres(lista, "Tripulacion")[0:1]
 
-    def at(self):
-        naves_nombre = self.lis_nombre()
+    def buscarat(self):
+        naves_nombre = self.funcionnombre()
         lista_nombres = []
         for i in naves_nombre:
             if i[0:2] == "AT":
@@ -71,14 +71,14 @@ class Vehiculos:
         else:
             return lista_nombres
 
-    def pasajeros_6_o_mas(self):
+    def pasajerossuperioraseis(self):
         lista = []
         for i in self.naves:
             if i ["Pasajeros"] >= 6:
                 lista.append(i["Pasajeros"])
-        return self.get_Nombres(lista, "Pasajeros")
+        return self.obtenernombres(lista, "Pasajeros")
 
-    def naves_peq_grand(self):
+    def ordenardepeqagrand(self):
         lista = []
         for i in self.naves:
             lista.append(i["Largo"])
