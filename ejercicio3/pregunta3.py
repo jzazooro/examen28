@@ -49,7 +49,7 @@ class Vehiculos:
         for i in self.naves:
             lista.append(i["Pasajeros"])
         lista.sort()
-        return self.obtenernombres(lista, 'Pasajeros')[0:5]
+        return self.obtenernombres(lista, 'Pasajeros')[6:11]
 
     def mayortripulacion(self):
         lista = []

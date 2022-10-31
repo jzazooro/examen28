@@ -29,15 +29,15 @@ def main():
 
         def main3():
             vehiculo1 = Vehiculo("Halcon milenario", 30, 2, 40)
-            vehiculo2 = Vehiculo("Estrella de la muerte", 1000000000, 2000000, 3000000000)
+            vehiculo2 = Vehiculo("Estrella de la muerte", 1000000000, 2000000, 3)
             vehiculo3 = Vehiculo("AT-AT", 119, 15, 300)
-            vehiculo4 = Vehiculo("Sclavo 1", 15, 3, 20)
+            vehiculo4 = Vehiculo("Sclavo 1", 15, 3, 200)
             vehiculo5 = Vehiculo("Destructor imperial", 1000, 200, 10000)
             vehiculo6 = Vehiculo("AT-ST", 14, 5, 6)
             vehiculo7 = Vehiculo("Canonera LAAT ", 51, 61, 82)
-            vehiculo8 = Vehiculo("Ala X", 7, 1, 2)
-            vehiculo9 = Vehiculo("Ala A", 6, 2, 1)
-            vehiculo10 = Vehiculo("Caza tie", 5, 1, 1)
+            vehiculo8 = Vehiculo("Ala X", 7, 1, 1)
+            vehiculo9 = Vehiculo("Ala A", 6, 2, 2)
+            vehiculo10 = Vehiculo("Caza tie", 5, 1, 2)
 
             
             print("La informacion del halcon milenario es: ", vehiculo1)

@@ -19,5 +19,6 @@ class test2(unittest.TestCase):
 
     def cuartotest(self):
         self.assertEqual(determinanterecursivo(self.matrizdos, 0, 0))
+
 if __name__ == '__name__':
     unittest.main()
