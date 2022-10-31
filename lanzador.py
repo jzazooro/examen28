@@ -3,7 +3,7 @@ from ejercicio2.pregunta2 import determinateiterativo
 from ejercicio2.pregunta2 import determinanterecursivo
 from ejercicio3.pregunta3 import Vehiculo
 from ejercicio3.pregunta3 import Vehiculos
-from ejercicio5.pregunta5 import encriptar
+from ejercicio5.pregunta5 import desencriptar, encriptar
 
 def main():
     
@@ -79,7 +79,8 @@ def main():
         def main5():
     
             encriptar()
-    
+            desencriptar()
+
         main5()
     
     if w < 1 or w > 5:
