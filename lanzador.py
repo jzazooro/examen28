@@ -12,9 +12,11 @@ def main():
     if w == 1:
         
         def main1():
-
-            torredehanoi()
-            hanoi(3)
+            k=int(input("¿cuantos discos desea que haya? Debe ser un numero entre 1 y 11, si no, se hara automaticamente con 11 discos: "))
+            if k >= 1 and k <= 11:
+                torredehanoi(k)
+            else:
+                torredehanoi(11)
 
         main1()
 
