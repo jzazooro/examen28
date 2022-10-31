@@ -72,7 +72,7 @@ def main():
 
     if w == 4:
     
-        a=3
+        print("Lo siento mucho, no he conseguido resolver este ejercicio")
     
     if w == 5:
     
