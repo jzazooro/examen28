@@ -2,6 +2,7 @@ from ejercicio2.pregunta2 import determinateiterativo
 from ejercicio2.pregunta2 import determinanterecursivo
 from ejercicio3.pregunta3 import Vehiculo
 from ejercicio3.pregunta3 import Vehiculos
+from ejercicio5.pregunta5 import encriptar
 
 def main():
     w=int(input("¿Que ejercicio desea hacer?: "))
@@ -58,6 +59,6 @@ def main():
     if w == 4:
         a=3
     if w == 5:
-        a=4
+        encriptar()
     if w < 1 or w > 5:
         print("Ha seleccionado un ejercicio inexistente")
