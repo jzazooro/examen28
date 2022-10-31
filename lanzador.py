@@ -1,3 +1,4 @@
+from ejercicio1.pregunta1 import torredehanoi
 from ejercicio2.pregunta2 import determinateiterativo
 from ejercicio2.pregunta2 import determinanterecursivo
 from ejercicio3.pregunta3 import Vehiculo
@@ -5,9 +6,18 @@ from ejercicio3.pregunta3 import Vehiculos
 from ejercicio5.pregunta5 import encriptar
 
 def main():
+    
     w=int(input("¿Que ejercicio desea hacer?: "))
+    
     if w == 1:
-        a=0
+        
+        def main1():
+
+            torredehanoi()
+            hanoi(3)
+
+        main1()
+
     if w == 2:
 
         def main2():
@@ -29,6 +39,7 @@ def main():
     if w == 3:
 
         def main3():
+    
             vehiculo1 = Vehiculo("Halcon milenario", 30, 2, 40)
             vehiculo2 = Vehiculo("Estrella de la muerte", 1000000000, 2000000, 3)
             vehiculo3 = Vehiculo("AT-AT", 119, 15, 300)
@@ -54,11 +65,21 @@ def main():
             print("Los vehiculos que empiezan por AT son: ", garage.buscarat())
             print("Los vehiculos que pueden llevar 6 o mas pasajeros son: ", garage.pasajerossuperioraseis())
             print("Los vehiculos ordenados de peques a grandes son: ", garage.ordenardepeqagrand())
+    
         main3()
 
     if w == 4:
+    
         a=3
+    
     if w == 5:
-        encriptar()
+    
+        def main5():
+    
+            encriptar()
+    
+        main5()
+    
     if w < 1 or w > 5:
+    
         print("Ha seleccionado un ejercicio inexistente")
